@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ru" translate="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#070708" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="google" content="notranslate" />
+    <title>xvigay</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <script type="module" crossorigin src="./assets/index-BoEzgpEC.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-xcf9eU-h.css">
+  </head>
+  <body class="phase-intro">
+    <div class="bg" id="bg">
+      <div class="bg-fallback" aria-hidden="true">
+        <div class="bg-tile"></div>
+        <div class="bg-tile"></div>
+      </div>
+      <!-- Фон: замените public/background.mp4. Подробности в README. -->
+      <video
+        id="bg-video"
+        class="bg-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        webkit-playsinline=""
+        preload="auto"
+        poster="./poster.jpg"
+      >
+        <source src="./background.mp4" type="video/mp4" />
+      </video>
+      <div class="bg-shade" aria-hidden="true"></div>
+    </div>
+
+    <section class="intro" id="intro" aria-label="Заставка">
+      <div class="rays" id="rays" aria-hidden="true"></div>
+      <div class="flash" aria-hidden="true"></div>
+      <div class="ring" aria-hidden="true"></div>
+      <div class="brand-wrap">
+        <h1 class="brand">xvigay</h1>
+      </div>
+    </section>
+
+    <main class="screen" id="main" aria-hidden="true">
+      <header class="hero">
+        <p class="eyebrow">ЭЖД · МЭШ</p>
+        <h2 class="hero-title">Электронный дневник<br /><span>собран заранее.</span></h2>
+      </header>
+
+      <div class="dots" aria-hidden="true">
+        <span class="dot is-on" data-step="tier"></span>
+        <span class="dot" data-step="period"></span>
+      </div>
+
+      <div class="card-frame">
+        <div class="card">
+          <div class="track" id="track">
+            <section class="step" id="step-tier" aria-label="Тариф">
+              <div class="tiles" id="tier-tiles" role="list"></div>
+              <div class="desc" id="tier-desc">
+                <p class="desc-empty" id="desc-empty">Выберите тариф — здесь появится, что в него входит.</p>
+                <div id="desc-body" hidden>
+                  <h3 id="tier-name"></h3>
+                  <ul class="features" id="tier-features"></ul>
+                </div>
+              </div>
+              <button class="btn btn-primary" id="next" type="button" disabled>
+                <span class="sheen" aria-hidden="true"></span>
+                <span class="btn-label">Далее</span>
+              </button>
+            </section>
+
+            <section class="step" id="step-period" aria-label="Срок">
+              <button class="btn btn-ghost" id="back" type="button">Назад</button>
+              <div class="period-grid" id="period-grid"></div>
+              <button class="btn btn-primary" id="confirm" type="button" disabled>
+                <span class="sheen" aria-hidden="true"></span>
+                <span class="btn-label" id="confirm-label">Продолжить</span>
+              </button>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-trial" id="trial" type="button">
+        <span>Пробная подписка на 3 дня</span>
+        <span class="free">Бесплатно</span>
+      </button>
+    </main>
+
+    <dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+      <form method="dialog" class="sheet-card">
+        <h3 id="sheet-title">Подтверждение</h3>
+        <p id="sheet-text"></p>
+        <div class="sheet-actions">
+          <button class="btn btn-primary is-solid" type="submit" value="ok">
+            <span class="sheen" aria-hidden="true"></span>
+            <span class="btn-label">Подтвердить</span>
+          </button>
+          <button class="btn btn-secondary" type="submit" value="cancel">Отмена</button>
+        </div>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <noscript>
+      <style>.brand-wrap{opacity:1!important}</style>
+      <p class="noscript">Дневнику нужен JavaScript. Откройте его в Telegram.</p>
+    </noscript>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  </body>
+</html>
