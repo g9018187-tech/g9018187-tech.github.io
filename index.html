@@ -8,8 +8,8 @@
     <meta name="google" content="notranslate" />
     <title>xvigay</title>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
-    <script type="module" crossorigin src="./assets/index-BoEzgpEC.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-xcf9eU-h.css">
+    <script type="module" crossorigin src="./assets/index-CVCYf2ap.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-ByLH3KDS.css">
   </head>
   <body class="phase-intro">
     <div class="bg" id="bg">
@@ -44,12 +44,43 @@
     </section>
 
     <main class="screen" id="main" aria-hidden="true">
+      <div class="carousel" id="carousel">
+        <div class="carousel-track" id="carousel-track">
+          <article class="slide" id="slide-cdz">
+            <div class="phone"><div class="phone-bar"></div><div class="phone-screen"><img src="./showcase/cdz.webp" alt=""></div></div>
+            <h3 class="slide-title">Все ЦДЗ рядом</h3>
+            <p class="slide-text">Цифровые задания от новых к уже сданным.</p>
+          </article>
+          <article class="slide" id="slide-hw">
+            <div class="phone"><div class="phone-bar"></div><div class="phone-screen"><img src="./showcase/hw.webp" alt=""></div></div>
+            <h3 class="slide-title">Домашка по предметам</h3>
+            <p class="slide-text">Сначала то, что на завтра, потом остальные дни.</p>
+          </article>
+          <article class="slide" id="slide-ai">
+            <div class="phone"><div class="phone-bar"></div><div class="phone-screen"><img src="./showcase/ai.webp" alt=""></div></div>
+            <h3 class="slide-title">Снимок — и решение</h3>
+            <p class="slide-text">Фото страницы, текст задания и ответ в одном окне.</p>
+          </article>
+          <article class="slide" id="slide-set">
+            <div class="phone"><div class="phone-bar"></div><div class="phone-screen"><img src="./showcase/settings.webp" alt=""></div></div>
+            <h3 class="slide-title">Вход и оформление</h3>
+            <p class="slide-text">МЭШ, язык, тема и цвет кнопки.</p>
+          </article>
+        </div>
+      </div>
+      <div class="pager">
+        <span id="pager-label">01 / 04</span>
+        <div class="dots" id="carousel-dots" aria-hidden="true">
+          <span class="dot is-on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+      </div>
+
       <header class="hero">
         <p class="eyebrow">ЭЖД · МЭШ</p>
         <h2 class="hero-title">Электронный дневник<br /><span>собран заранее.</span></h2>
       </header>
 
-      <div class="dots" aria-hidden="true">
+      <div class="dots step-dots" aria-hidden="true">
         <span class="dot is-on" data-step="tier"></span>
         <span class="dot" data-step="period"></span>
       </div>
@@ -89,6 +120,11 @@
         <span class="free">Бесплатно</span>
       </button>
     </main>
+
+    <div class="app" id="view-app" hidden>
+      <div class="app-body" id="app-body"></div>
+      <nav class="tabbar" id="tabbar"></nav>
+    </div>
 
     <dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
       <form method="dialog" class="sheet-card">
