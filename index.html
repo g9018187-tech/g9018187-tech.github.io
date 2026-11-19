@@ -8,8 +8,31 @@
     <meta name="google" content="notranslate" />
     <title>xvigay</title>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
-    <script type="module" crossorigin src="./assets/index-nOEgadKj.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BoV-w_4h.css">
+    <script>
+      window.xvigayTelegram = function () {
+        var tg = window.Telegram && window.Telegram.WebApp;
+        if (!tg) return;
+        try {
+          tg.ready();
+          tg.expand();
+        } catch (e) {}
+      };
+      xvigayTelegram();
+      var api = new URLSearchParams(location.search).get("api");
+      if (api) {
+        try {
+          var link = document.createElement("link");
+          link.rel = "preconnect";
+          link.href = new URL(api, location.href).origin;
+          link.crossOrigin = "anonymous";
+          document.head.appendChild(link);
+        } catch (e) {}
+      }
+    </script>
+    <script async src="https://telegram.org/js/telegram-web-app.js" onload="xvigayTelegram()"></script>
+    <style>html,body{color:#f5f5f6;background:#070708;margin:0;font-family:-apple-system,SF Pro Text,SF Pro,Roboto,system-ui,sans-serif}.bg,.intro{position:fixed;inset:0}.intro{background:#070708;place-items:center;display:grid}.brand{letter-spacing:-.05em;margin:0;font-size:64px;font-weight:700}.bg-tile{background:radial-gradient(at 30% 40%,#8c182473,#0000 46%),#070708;height:100dvh}</style>
+    <script type="module" crossorigin src="./assets/index-onBE9o80.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-2P-rtyhV.css">
   </head>
   <body class="phase-intro">
     <div class="bg" id="bg">
@@ -21,16 +44,14 @@
       <video
         id="bg-video"
         class="bg-video"
-        autoplay
         muted
         loop
         playsinline
         webkit-playsinline=""
-        preload="auto"
+        preload="none"
         poster="./poster.jpg"
-      >
-        <source src="./background.mp4" type="video/mp4" />
-      </video>
+        data-src="./background.mp4"
+      ></video>
       <div class="bg-shade" aria-hidden="true"></div>
     </div>
 
@@ -47,22 +68,22 @@
       <div class="carousel" id="carousel">
         <div class="carousel-track" id="carousel-track">
           <article class="slide" id="slide-cdz">
-            <div class="phone"><div class="phone-bar"></div><div class="phone-screen"><img src="./showcase/cdz.webp" alt=""></div></div>
+            <div class="phone"><div class="phone-bar"></div><div class="phone-screen"><img src="./showcase/cdz.webp" alt="" decoding="async"></div></div>
             <h3 class="slide-title">Все ЦДЗ рядом</h3>
             <p class="slide-text">Цифровые задания от новых к уже сданным.</p>
           </article>
           <article class="slide" id="slide-hw">
-            <div class="phone"><div class="phone-bar"></div><div class="phone-screen"><img src="./showcase/hw.webp" alt=""></div></div>
+            <div class="phone"><div class="phone-bar"></div><div class="phone-screen"><img src="./showcase/hw.webp" alt="" loading="lazy" decoding="async"></div></div>
             <h3 class="slide-title">Домашка по предметам</h3>
             <p class="slide-text">Сначала то, что на завтра, потом остальные дни.</p>
           </article>
           <article class="slide" id="slide-ai">
-            <div class="phone"><div class="phone-bar"></div><div class="phone-screen"><img src="./showcase/ai.webp" alt=""></div></div>
+            <div class="phone"><div class="phone-bar"></div><div class="phone-screen"><img src="./showcase/ai.webp" alt="" loading="lazy" decoding="async"></div></div>
             <h3 class="slide-title">Снимок — и решение</h3>
             <p class="slide-text">Фото страницы, текст задания и ответ в одном окне.</p>
           </article>
           <article class="slide" id="slide-set">
-            <div class="phone"><div class="phone-bar"></div><div class="phone-screen"><img src="./showcase/settings.webp" alt=""></div></div>
+            <div class="phone"><div class="phone-bar"></div><div class="phone-screen"><img src="./showcase/settings.webp" alt="" loading="lazy" decoding="async"></div></div>
             <h3 class="slide-title">Вход и оформление</h3>
             <p class="slide-text">МЭШ, язык, тема и цвет кнопки.</p>
           </article>
@@ -148,6 +169,5 @@
       <style>.brand-wrap{opacity:1!important}</style>
       <p class="noscript">Дневнику нужен JavaScript. Откройте его в Telegram.</p>
     </noscript>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
   </body>
 </html>
